@@ -1,7 +1,7 @@
-IronMQ on OpenShift in 5 Minutes
+Treasure Data on OpenShift in 5 Minutes
 --------------------------------
 
-This git repository helps you easily integrate the cloud message queue service IronMQ into your OpenShift apps.
+This git repository helps you easily integrate Treasure Data Big Data as-a-Service into your OpenShift apps.
 
 ###Step 1. Create OpenShift App###
 
@@ -9,47 +9,45 @@ Create an account at http://openshift.redhat.com/ and set up you local machine w
 
 Create a ruby-1.9 application (you can call your application whatever you want) and change into the application directory.
 <pre>
-    rhc app create ironmq ruby-1.9 --from-code https://github.com/openshift/ironmq-openshift-quickstart
-    cd ironmq
+$ rhc app create treasure-data ruby-1.9 --from-code https://github.com/treasure-data/treasure-data-openshift-quickstart
+$ cd treasure-data
 </pre>
 
-###Step 2. Configure IronMQ###
+###Step 2. Configure Treasure Data###
 
-1. Sign up for a developer account at http://iron.io
+1. Sign up for a free account at http://www.treasure-data.com/
+2. Download [Treasure Data toolbelt](http://toolbelt.treasure-data.com/) and authenticate it by `td account -f` command
 2. Create a project
-3. Retrieve your token and project_id
-4. Enter those values into <strong>config.rb</strong>
+3. Retrieve your apikey by `td apikey:show` command
+4. Enter apikey into <strong>config.rb</strong>
 
 ```
-  config = {
-    token: 'put_token_here',
-    project_id: 'put_project_id_here'
+  {
+    :apikey => 'YOUR_API_KEY_HERE'
   }
 ```
 
 ###Step 3. Deploy your app###
 
 ```
-    git add .
-    git commit -m "my first commmit"
-    git push
+$ git add .
+$ git commit -m "my first commmit"
+$ git push
 ```
 
 ###Step 4. View your app!###
 
 ```
-    http://ironmq-$yournamespace.rhcloud.com
+$ open http://traesure-data-$yournamespace.rhcloud.com/
 ```
 
 
 More Information
 ----------------------------
 
-For IronMQ's developer center visit http://dev.iron.io
+For Treasure Data's documentation visit http://docs.treasure-data.com/
 
-For more info on the IronMQ Ruby client visit https://github.com/iron-io/iron_mq_ruby
+For more info on the Treasure Data Ruby client visit [td-client-ruby](https://github.com/treasure-data/td-client-ruby) and [td-logger-ruby](https://github.com/treasure-data/td-logger-ruby]
 
-For info on using IronMQ with other programming languages visit: http://dev.iron.io/mq/libraries/
-
-For more information on Iron.io visit http://iron.io
+For more information on Treasure Data visit http://www.treasure-data.com/
 
