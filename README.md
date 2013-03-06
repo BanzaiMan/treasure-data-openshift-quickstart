@@ -9,15 +9,15 @@ Create an account at http://openshift.redhat.com/ and set up you local machine w
 
 Create a ruby-1.9 application (you can call your application whatever you want) and change into the application directory.
 <pre>
-$ rhc app create treasure-data ruby-1.9 --from-code https://github.com/treasure-data/treasure-data-openshift-quickstart
-$ cd treasure-data
+$ rhc app create treasuredata ruby-1.9 --from-code https://github.com/treasure-data/treasure-data-openshift-quickstart
+$ cd treasuredata
 </pre>
 
 ###Step 2. Configure Treasure Data###
 
 1. Sign up for a free account at http://www.treasure-data.com/
 2. Download [Treasure Data toolbelt](http://toolbelt.treasure-data.com/) and authenticate it by `td account -f` command
-2. Create a project
+2. Create a db and table
 3. Retrieve your apikey by `td apikey:show` command
 4. Enter apikey into <strong>config.rb</strong>
 
