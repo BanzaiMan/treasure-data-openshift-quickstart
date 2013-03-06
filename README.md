@@ -38,7 +38,7 @@ $ git push
 ###Step 4. View your app!###
 
 ```
-$ open http://traesure-data-$yournamespace.rhcloud.com/
+$ open http://treasuredata-$yournamespace.rhcloud.com/
 ```
 
 
